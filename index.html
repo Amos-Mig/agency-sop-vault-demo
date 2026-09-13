@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<meta property='og:url' content='https://amos-mig.github.io/agency-sop-vault-demo/'>
+<link rel='canonical' href='https://amos-mig.github.io/agency-sop-vault-demo/'>
+<title>Agency Sop Vault</title>
+<style>
+*{box-sizing:border-box;margin:0}
+body{background:#0b0d12;color:#e8eaf0;font:16px/1.55 system-ui,'Segoe UI',Roboto,sans-serif}
+a{color:#f59e0b;text-decoration:none}
+a:hover{text-decoration:underline}
+.banner{background:#f59e0b;color:#0b0d12;text-align:center;padding:9px 14px;font-size:13px;font-weight:700}
+.wrap{max-width:960px;margin:0 auto;padding:30px 18px 10px}
+h1{font-size:clamp(27px,5vw,40px);letter-spacing:-.5px}
+h1 em{color:#f59e0b;font-style:normal}
+h2{font-size:19px;margin:34px 0 4px}
+h3{font-size:14px;margin-bottom:6px}
+.sub{color:#9aa3b2;max-width:680px;margin:10px 0 8px}
+.panel{background:#14171f;border:1px solid #262b36;border-radius:10px;padding:18px;margin-top:14px}
+.tabs{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.tab{background:#14171f;border:1px solid #262b36;color:#9aa3b2;padding:8px 13px;border-radius:8px;cursor:pointer;font:inherit;font-size:13px}
+.tab.on{border-color:#f59e0b;color:#f59e0b}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.pill{font-size:11.5px;color:#9aa3b2;border:1px solid #262b36;border-radius:99px;padding:2px 9px}
+.pill.hi{color:#f59e0b;border-color:#f59e0b}
+.step{display:flex;gap:12px;padding:11px 2px;border-top:1px dashed #262b36;font-size:14.5px}
+.step:first-of-type{border-top:0}
+.step b{color:#f59e0b;font-family:ui-monospace,Consolas,monospace}
+.tease{margin-top:10px;padding:10px 12px;border:1px dashed #262b36;border-radius:8px;color:#9aa3b2;font-size:13.5px}
+label.ck{display:flex;gap:10px;padding:7px 2px;font-size:14.5px;cursor:pointer}
+label.ck input{accent-color:#f59e0b;width:16px;height:16px;margin-top:3px;flex:none}
+.bar{height:8px;background:#262b36;border-radius:99px;overflow:hidden;margin:14px 0 8px}
+.bar i{display:block;height:100%;width:0;background:#f59e0b;transition:width .25s}
+#vd{color:#9aa3b2;font-size:14px}
+#sc{color:#f59e0b;font-weight:700}
+.row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 12px;border:1px solid #262b36;border-radius:8px;margin-top:8px;font-size:14px;background:#14171f}
+.row .n{color:#5b6270;font-family:ui-monospace,Consolas,monospace;margin-right:8px}
+.row.lock{border-style:dashed;color:#9aa3b2;cursor:pointer}
+.row.lock:hover{border-color:#f59e0b}
+.row .hint{font-size:12px;color:#f59e0b;opacity:0;white-space:nowrap;transition:opacity .2s}
+.row.lock.flash .hint{opacity:1}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-top:14px}
+.card{background:#14171f;border:1px solid #262b36;border-radius:10px;padding:15px;font-size:13.5px;color:#9aa3b2}
+.card h3{color:#e8eaf0}
+.card.lock{border-style:dashed}
+.card.lock h3{color:#9aa3b2}
+pre{background:#0e1118;border:1px solid #262b36;border-radius:10px;padding:15px;overflow:auto;font:13px/1.65 ui-monospace,Consolas,monospace;color:#c9d1e3;margin-top:14px}
+pre .cm{color:#5b6270}
+pre .ac{color:#f59e0b}
+.ex{font-size:12px;color:#5b6270;margin-top:6px}
+.cta{display:inline-block;background:#f59e0b;color:#0b0d12;font-weight:700;padding:13px 22px;border-radius:9px;margin-top:18px}
+.cta:hover{text-decoration:none;filter:brightness(1.08)}
+footer{border-top:1px solid #262b36;margin-top:40px;padding:20px 18px;font-size:13px;color:#9aa3b2;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;max-width:960px;margin-inline:auto}
+@media(max-width:640px){.row{flex-direction:column;align-items:flex-start;gap:2px}}
+</style>
+</head>
+<body>
+<div class='banner'>Live demo — only Section 01 is unlocked. The full product does more ↓</div>
+<div class='wrap'>
+<h1>Agency Sop Vault</h1>
+<p class='sub'>A field-tested markdown blueprint that compresses weeks of agency trial-and-error into one document. Follow the checklists, adapt the templates, move straight to execution.</p>
+
+<h2>Peek inside the vault</h2>
+<div class='tabs'>
+<button class='tab on' data-p='read'>Read · Section 01</button>
+<button class='tab' data-p='score'>Score your agency ops</button>
+<button class='tab' data-p='map'>Section map</button>
+</div>
+
+<div class='panel' id='read'>
+<div class='meta'><span class='pill hi'>§ 01</span><span class='pill'>trigger: SOW signed</span><span class='pill'>owner: account lead</span><span class='pill'>~5 business days</span></div>
+<h3>Client Onboarding SOP</h3>
+<div class='step'><b>1.</b><span><strong>Kickoff call — day 1.</strong> Agenda goes out 24h ahead. Confirm the decision-maker, the one success metric that matters, and the single channel for requests.</span></div>
+<div class='step'><b>2.</b><span><strong>Welcome pack — day 1–2.</strong> Send the onboarding email + intake form; log every answer in the client tracker before the first task is scheduled.</span></div>
+<div class='tease'>🔒 Steps 3–5 (access collection, tool setup, day-30 review ritual) plus the fill-in intake form template are in the full vault.</div>
+</div>
+
+<div class='panel' id='score' hidden>
+<p style='font-size:14px;color:#9aa3b2'>Tick what your agency already has documented — your score updates live.</p>
+<label class='ck'><input type='checkbox'> A written client-onboarding SOP anyone can follow</label>
+<label class='ck'><input type='checkbox'> A signed-off SOW / scope template</label>
+<label class='ck'><input type='checkbox'> A weekly client status-update routine</label>
+<label class='ck'><input type='checkbox'> An offboarding &amp; handover checklist</label>
+<label class='ck'><input type='checkbox'> A rate card / pricing written down</label>
+<label class='ck'><input type='checkbox'> An escalation path for scope creep</label>
+<div class='bar'><i id='fill'></i></div>
+<p id='vd'><span id='sc'>0 / 6</span><span id='vt'> documented — tick the boxes to score.</span></p>
+</div>
+
+<div class='panel' id='map' hidden>
+<div class='row'><span><span class='n'>01</span>Client Onboarding SOP</span><span style='color:#f59e0b;font-size:12px'>open in demo ↑</span></div>
+<div class='row lock'><span><span class='n'>02</span>Project Kickoff Checklist</span><span class='hint'>🔒 in the full vault</span></div>
+<div class='row lock'><span><span class='n'>03</span>Scope of Work (SOW) Templates</span><span class='hint'>🔒 in the full vault</span></div>
+<div class='row lock'><span><span class='n'>04</span>Weekly Status &amp; Reporting</span><span class='hint'>🔒 in the full vault</span></div>
+<div class='row lock'><span><span class='n'>05</span>Scope-Creep Escalation Path</span><span class='hint'>🔒 in the full vault</span></div>
+<div class='row lock'><span><span class='n'>06</span>Offboarding &amp; Handover</span><span class='hint'>🔒 in the full vault</span></div>
+<div class='row lock'><span><span class='n'>07</span>Pricing &amp; Rate Card Worksheet</span><span class='hint'>🔒 in the full vault</span></div>
+<div class='row lock'><span><span class='n'>08</span>Retainer Renewal Sequence</span><span class='hint'>🔒 in the full vault</span></div>
+</div>
+
+<h2>What you get</h2>
+<div class='cards'>
+<div class='card'><h3>Step-by-step structure</h3>Every SOP names its trigger, its owner and the exact next action — no guessing what to do on Monday morning.</div>
+<div class='card'><h3>Checklists &amp; tables</h3>Intake forms, status tables and worksheets you fill in once and reuse on every new client.</div>
+<div class='card'><h3>Field-tested, not theory</h3>Written from live agency delivery — including the failures that cost weeks to learn the hard way.</div>
+<div class='card lock'><h3>🔒 8 SOP sections + intake template</h3>Kickoff, SOW, reporting, escalation, offboarding and more — in the full vault.</div>
+<div class='card lock'><h3>🔒 Pricing worksheet &amp; renewal sequence</h3>Rate-card table + retainer renewal emails — in the full vault.</div>
+</div>
+
+<h2>Real snippet from the vault</h2>
+<pre><span class='cm'>&lt;!-- Agency Sop Vault · § 04 excerpt --&gt;</span>
+<span class='ac'>## 04 · Weekly Client Status</span>
+**Trigger:** every Friday 15:00 · **Owner:** account lead
+
+| Field            | Fills in | Due       |
+|------------------|----------|-----------|
+| Wins this week   | lead     | Fri 14:00 |
+| Blockers &amp; risks | lead     | Fri 14:00 |
+| Next week plan   | lead     | Fri 14:00 |
+
+1. Send the update **before** the client asks.
+2. New request mid-week? Log it in § 05 — never absorb silently.
+3. <span class='cm'>… 3 more rules + the fill-in status template in the full vault</span></pre>
+<p class='ex'>Excerpt — 1 of 8 sections. The full vault is one .md file: any markdown viewer or Notion.</p>
+
+<h2>Get the whole vault</h2>
+<p class='sub'>One document. Eight field-tested SOPs, checklists and templates. Read it in 40 minutes, run it for years.</p>
+<a class='cta' href='https://amosmign.gumroad.com/l/agency-sop-vault'>Get the full Agency Sop Vault · $7</a>
+</div>
+<footer>
+<span>Agency Sop Vault</span>
+<span><a href='https://kits.amosmignery.dev'>kits.amosmignery.dev</a> · <a href='https://github.com/Amos-Mig/agency-sop-vault-demo'>GitHub</a> · <a href='https://amosmign.gumroad.com/l/agency-sop-vault'>Get it · $7</a></span>
+</footer>
+<script>
+var h=document.querySelector('h1');h.innerHTML=h.innerHTML.replace(/SOP/i,'<em>$&amp;</em>');
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){
+ document.querySelectorAll('.tab').forEach(function(x){x.classList.toggle('on',x===t)});
+ ['read','score','map'].forEach(function(id){document.getElementById(id).hidden=id!==t.dataset.p});
+};});
+var cks=[].slice.call(document.querySelectorAll('.ck input')),
+ fill=document.getElementById('fill'),sc=document.getElementById('sc'),vt=document.getElementById('vt'),
+ msgs=['Improvised ops — every client is a fire drill. Sections 01–03 of the vault exist for exactly this.','Patchy systems — you have habits, not playbooks. The checklists turn them into one in an afternoon.','Solid ops — the vault will mostly save review time; grab it for the templates you are still missing.'];
+cks.forEach(function(c){c.onchange=function(){
+ var n=cks.filter(function(x){return x.checked}).length;
+ fill.style.width=(n/cks.length*100)+'%';
+ sc.textContent=n+' / '+cks.length;
+ vt.textContent=' documented — '+msgs[n<3?0:n<5?1:2];
+};});
+document.querySelectorAll('.row.lock').forEach(function(r){r.onclick=function(){
+ r.classList.add('flash');setTimeout(function(){r.classList.remove('flash')},1300);
+};});
+</script>
+</body>
+</html>
